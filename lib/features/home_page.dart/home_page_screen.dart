@@ -4,6 +4,7 @@ import 'package:ui_figma/core/styling/app_assets.dart';
 import 'package:ui_figma/core/styling/app_colors.dart';
 import 'package:ui_figma/core/styling/app_styles.dart';
 import 'package:ui_figma/features/home_page.dart/widgets/carousel_widget.dart';
+import 'package:ui_figma/features/home_page.dart/widgets/custom_home_page_item.dart';
 import 'package:ui_figma/features/home_page.dart/widgets/top_profile_notification.dart';
 import 'package:ui_figma/widgets/space_widgets.dart.dart';
 
@@ -26,6 +27,38 @@ class _HomePageScreenState extends State<HomePageScreen> {
 
           HightSpaceWidgets(height: 27),
           CarouselWidget(),
+          HightSpaceWidgets(height: 24),
+          Expanded(
+            child: GridView(
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                mainAxisSpacing: 8.sp,
+                crossAxisSpacing: 8.sp,
+              ),
+              children: [
+                CustomHomePageWidget(
+                  title: "Send Money",
+                  description: "Take Acc to Acc",
+                  iconData: Icons.send,
+                ),
+                CustomHomePageWidget(
+                  title: "Pay the bill",
+                  description: "Take Acc to Acc",
+                  iconData: Icons.payment,
+                ),
+                CustomHomePageWidget(
+                  title: "Request",
+                  description: "Take Acc to Acc",
+                  iconData: Icons.request_quote,
+                ),
+                CustomHomePageWidget(
+                  title: "Contact",
+                  description: "Take Acc to Acc",
+                  iconData: Icons.contact_mail,
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
