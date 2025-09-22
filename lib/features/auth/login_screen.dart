@@ -114,6 +114,9 @@ class _LoginScreenState extends State<LoginScreen> {
                       if (formKey.currentState!.validate()) {
                         print(emailController.text);
                         print(password.text);
+                        GoRouter.of(
+                          context,
+                        ).pushNamed(AppRoutes.veriftyOtpScreen);
                       }
                       ;
                     },

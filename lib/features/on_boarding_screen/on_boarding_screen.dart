@@ -26,7 +26,8 @@ class OnBoardingScreen extends StatelessWidget {
             HightSpaceWidgets(height: 18),
             PrimayButtonWidget(
               onPressed: () {
-                GoRouter.of(context).pushNamed(AppRoutes.loginScreem);
+                // GoRouter.of(context).pushNamed(AppRoutes.loginScreem);
+                GoRouter.of(context).goNamed(AppRoutes.mainScreen);
               },
               width: 331.w,
               height: 56.h,
@@ -49,7 +50,6 @@ class OnBoardingScreen extends StatelessWidget {
                 decoration: TextDecoration.underline,
               ),
             ),
-            
           ],
         ),
       ),

@@ -4,7 +4,9 @@ import 'package:ui_figma/features/auth/create_new_password_screen.dart';
 import 'package:ui_figma/features/auth/forgot_password_screen.dart';
 import 'package:ui_figma/features/auth/login_screen.dart';
 import 'package:ui_figma/features/auth/register_screen.dart';
+import 'package:ui_figma/features/main_screen/main_screen.dart';
 import 'package:ui_figma/features/on_boarding_screen/on_boarding_screen.dart';
+import 'package:ui_figma/features/verify_otp/verifty_otp_screen.dart';
 
 class RouterGenerationConfig {
   static GoRouter goRouter = GoRouter(
@@ -34,6 +36,16 @@ class RouterGenerationConfig {
         path: AppRoutes.createNewPasword,
         name: AppRoutes.createNewPasword,
         builder: (context, state) => const CreateNewPasswordScreen(),
+      ),
+            GoRoute(
+        path: AppRoutes.veriftyOtpScreen,
+        name: AppRoutes.veriftyOtpScreen,
+        builder: (context, state) => const VeriftyOtpScreen(),
+      ),
+GoRoute(
+        path: AppRoutes.mainScreen,
+        name: AppRoutes.mainScreen,
+        builder: (context, state) => const MainScreen(),
       ),
     ],
   );
