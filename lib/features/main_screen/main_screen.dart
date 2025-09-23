@@ -4,6 +4,7 @@ import 'package:ui_figma/core/styling/app_colors.dart';
 import 'package:ui_figma/features/home_page.dart/home_page_screen.dart';
 import 'package:ui_figma/features/my_card/card_page_screen.dart';
 import 'package:ui_figma/features/profile_page/profile_page_screen.dart';
+import 'package:ui_figma/features/statistics_page/statistics_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -16,12 +17,7 @@ class _MainScreen extends State<MainScreen> {
   int currentIndex = 0;
   List<Widget> screens = [
     HomePageScreen(),
-    Container(
-      width: double.infinity,
-      height: double.infinity,
-      child: Text('Home Screen'),
-      color: Colors.blue,
-    ),
+    StatisticsScreen(),
 
     Container(
       width: double.infinity,
